@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{book.title}}</title>
+    </head>
+    <body>
+        <h1>{{book.title}}</h1>
+        <p><b>Author:</b>{{book.author}}</p>
+        <p><b>Price:</b>Rs. {{book.price}}</p>
+        <p><b>Published on:</b>{{book.publication_date}}</p>
+        <p>{{book.description}}</p>
+        <p><a href="{% url 'edit_book' book.id %}">Edit Book</a></p>
+        <p><a href="{% url 'delete_book' book.id %}">Delete Book</a></p>
+        <p><a href="{% url 'list_books' %}">View all books</a></p>
+        <p><a href="{% url 'home_page' %}">Back to Home</a></p>
+    </body>
+</html>
