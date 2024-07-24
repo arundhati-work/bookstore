@@ -8,7 +8,7 @@
         <form method="POST">
             {% csrf_token %}
             {{form.as_p}}
-            <button type="submit">{%if book%} Update {%else%} Create {%end if%} Book</button>
+            <button type="submit">{%if book%} Update {%else%} Create {%endif%} Book</button>
         </form>
         <p><a href="{% url 'list_books' %}">View all books</a></p>
         <p><a href="{% url 'home_page' %}">Back to Home</a></p>

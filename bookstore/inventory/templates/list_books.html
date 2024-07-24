@@ -8,8 +8,7 @@
         <ul>
         {% for book in books %}
             <li>
-                <p><a href="{% url 'book_detail' book.id %}">{{book.title}}</a> by {{book.author}}</p>
-                <p>Rs. {{book.price}}</p>
+                <p><a href="{% url 'book_detail' book.id %}">{{book.title}}</a> by {{book.author}} &ensp;&ensp; Rs. {{book.price}}</p>
             </li>
             {% empty %}
             <li><p>No books available.</p></li>
